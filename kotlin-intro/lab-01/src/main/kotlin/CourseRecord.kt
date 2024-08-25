@@ -9,7 +9,7 @@ class CourseRecord(name: String, year: Int, credits: Int, grade: Double) {
         private set
 
     init {
-        require(credits > 0) {"'credits' value must be greater than 0"}
-        require(grade >= 0.0) {"'grade' value must be greater or equal to 0"}
+        require(credits > 0) {"\"credits\" value must be greater than 0"}
+        require(grade >= 0.0) {"\"grade\" value must be greater or equal to 0"}
     }
 }
