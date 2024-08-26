@@ -54,7 +54,6 @@ class FractionMutable(numerator: Int, denominator: Int, sign: Int = 1) {
     private fun calculate(arithmetic: (a: Int, b: Int, c: Int, d: Int) -> Pair<Int, Int> ):
                 (FractionMutable) -> Unit = { other: FractionMutable ->
         val (newNum, newDen) = arithmetic(numerator, denominator, other.numerator, other.denominator)
-        //simplify(results.first, results.second )
         numerator = newNum
         denominator = newDen
         simplifyThis()
