@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "kotlin-intro"
 include("lab-01")
+include("lab-02")
