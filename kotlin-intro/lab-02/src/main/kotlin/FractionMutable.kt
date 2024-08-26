@@ -59,13 +59,17 @@ class FractionMutable(numerator: Int, denominator: Int, sign: Int = 1) {
         simplifyThis()
     }
 
-    private val addFractions = { a: Int, b: Int, c: Int, d: Int -> Pair(a*d + b*c, b*d)}
-    private val multFractions = { a: Int, b: Int, c: Int, d: Int -> Pair(a*c, b*d)}
-    private val divFractions = { a: Int, b: Int, c: Int, d: Int -> Pair(a*d, b*c)}
+//    private val addFractions = { a: Int, b: Int, c: Int, d: Int -> Pair(a*d + b*c, b*d)}
+//    private val multFractions = { a: Int, b: Int, c: Int, d: Int -> Pair(a*c, b*d)}
+//    private val divFractions = { a: Int, b: Int, c: Int, d: Int -> Pair(a*d, b*c)}
+//
+//    val add = calculate(addFractions)
+//    val mult = calculate(multFractions)
+//    val div = calculate(divFractions)
 
-    val add = calculate(addFractions)
-    val mult = calculate(multFractions)
-    val div = calculate(divFractions)
+    val add = calculate { a: Int, b: Int, c: Int, d: Int -> Pair(a*d + b*c, b*d)}
+    val mult = calculate { a: Int, b: Int, c: Int, d: Int -> Pair(a*c, b*d)}
+    val div = calculate { a: Int, b: Int, c: Int, d: Int -> Pair(a*d, b*c)}
 
     fun intPart(): Int {
         return numerator / denominator
