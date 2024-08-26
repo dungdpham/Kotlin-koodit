@@ -21,6 +21,8 @@ internal class FractionMutableTest {
     fun addPos1() {
         val a = FractionMutable(1,2)
         a.add(FractionMutable(1,3))
+        println(a.numerator)
+        println(a.denominator)
         assert(a.toString() == "5/6")
     }
     @Test
