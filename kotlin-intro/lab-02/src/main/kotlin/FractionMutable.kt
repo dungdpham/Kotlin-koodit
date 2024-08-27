@@ -13,10 +13,6 @@ class FractionMutable(numerator: Int, denominator: Int, sign: Int = 1) {
         simplifyThis()
     }
 
-    private fun getGcd(a: Int, b: Int): Int {
-        return if (b == 0) a else getGcd(b, a % b)
-    }
-
     private fun simplifyThis() {
         val gcd = getGcd(abs(numerator), abs(denominator))
         numerator = if (numerator * denominator < 0)
@@ -27,6 +23,10 @@ class FractionMutable(numerator: Int, denominator: Int, sign: Int = 1) {
 
     override fun toString(): String {
         return "$numerator/$denominator"
+    }
+
+    private fun getGcd(a: Int, b: Int): Int {
+        return if (b == 0) a else getGcd(b, a % b)
     }
 
     fun negate() {
