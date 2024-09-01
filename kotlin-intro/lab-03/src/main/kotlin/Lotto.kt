@@ -7,10 +7,11 @@ class Lotto(private val lottoRange: IntRange, private val n: Int) {
     init {
         require(lottoRange.all { it in 0..Int.MAX_VALUE }) {"Lotto range must be between 0 and ${Int.MAX_VALUE}"}
         require(n > 0) { "Amount of secret numbers must be a positive integer" }
+        require(lottoRange.toList().size >= n) { "Lotto range must have at least $n integers" }
     }
 
-    fun pickNDistinct(range: IntRange, n: Int): List<Int> {
-        return range.toList().shuffled().take(n).sorted()
+    fun pickNDistinct(range: IntRange, n: Int): List<Int>? {
+        return if (range.toList().size < n) null else range.toList().shuffled().take(n).sorted()
     }
 
     fun numDistinct(list: List<Int>): Int {
@@ -46,11 +47,11 @@ class Lotto(private val lottoRange: IntRange, private val n: Int) {
         var choice: String
         var guess: List<Int>
         do {
-            secretNumbers = pickNDistinct(lottoRange, n)
+            secretNumbers = requireNotNull(pickNDistinct(lottoRange, n)) {"Not enough integers in range"}
 
             guess = readNDistinct(lottoRange.first, lottoRange.last, n)
             println("Lotto numbers: $guess, you got ${checkGuess(guess)} correct!")
-            println("Secret numbers: $secretNumbers")
+//            println("Secret numbers: $secretNumbers")
 
             val (steps, results) = findLotto(this)
             println("Computer guess in $steps steps is $results")
