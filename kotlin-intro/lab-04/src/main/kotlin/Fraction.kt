@@ -13,7 +13,7 @@ class Fraction(numerator: Int, denominator: Int, private val sign: Int = 1) : Co
         return  if (b == 0) a else getGcd(b, a % b)
     }
 
-    override fun toString(): String = "${if (sign == -1 ) "-" else ""}$num/$denom"
+    override fun toString(): String = "${if (sign == -1) "-" else ""}$num/$denom"
 
     override fun equals(other: Any?): Boolean = (this === other) ||
             (other is Fraction
@@ -26,7 +26,7 @@ class Fraction(numerator: Int, denominator: Int, private val sign: Int = 1) : Co
 //        result = 31 * result + num
 //        result = 31 * result + denom
 //        return result
-//    } //Auto suggest by IntelliJ
+//    } //by IntelliJ
 
     override fun hashCode(): Int = Objects.hash(num, denom, sign)
 
@@ -81,9 +81,14 @@ fun main() {
     println(Fraction(2,3) * Fraction(3,2))
     println(Fraction(1,2) > Fraction(2,3))
 
+    println(Fraction(1,2) + Fraction(1,4) - Fraction(1,3, -1))
     println(Fraction(11,12) < Fraction(17,18))
-    val b = mutableSetOf(Fraction(1,3 ), Fraction(1,2,-1))
-    b.add(Fraction(6,1))
-    b.add(-Fraction(32,64))
-    println(b.sorted())
+
+    val b = a
+    println(a.equals(b))
+
+    val c = mutableSetOf(Fraction(1,3 ), Fraction(1,2,-1))
+    c.add(-Fraction(6,1,-1))
+    c.add(-Fraction(32,64))
+    println(c.sorted())
 }
