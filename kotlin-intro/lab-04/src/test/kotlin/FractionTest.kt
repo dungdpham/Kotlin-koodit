@@ -74,7 +74,7 @@ internal class FractionTest {
 
     @Test
     fun minus() {
-        assert(Fraction(5,6) - Fraction(1,3) == Fraction(1,2))
+        assert(Fraction(1,3) - Fraction(5,6) == -Fraction(1,2))
     }
 
     @Test

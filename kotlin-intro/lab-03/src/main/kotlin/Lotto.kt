@@ -39,7 +39,8 @@ class Lotto(private val lottoRange: IntRange, private val n: Int) {
         do {
             print("Give $n numbers from $low to $high, separated by commas: ")
             guess = readln().filterNot { it.isWhitespace() }.split(",").mapNotNull { it.toIntOrNull() }.sorted()
-        } while (guess.toSet().size != n || guess.size != n || !guess.all { it in low..high })
+//        } while (guess.toSet().size != n || guess.size != n || !guess.all { it in low..high })
+        } while (!isLegalLottoGuess(guess, low..high, n))
         return guess
     }
 
