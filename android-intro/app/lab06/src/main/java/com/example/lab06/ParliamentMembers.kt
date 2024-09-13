@@ -1,10 +1,12 @@
+package com.example.lab06
+
 class ParliamentMember(val hetekaId: Int,
-    var seatNumber: Int = 0,
-    var lastname: String = "",
-    var firstname: String = "",
-    var party: String = "",
-    var minister: Boolean = false,
-    var pictureUrl: String = "") {
+                       var seatNumber: Int = 0,
+                       var lastname: String = "",
+                       var firstname: String = "",
+                       var party: String = "",
+                       var minister: Boolean = false,
+                       var pictureUrl: String = "") {
     fun seatNumber(seatNumber: Int): ParliamentMember {
         this.seatNumber = seatNumber
         return this

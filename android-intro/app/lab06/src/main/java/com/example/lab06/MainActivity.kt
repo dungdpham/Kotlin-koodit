@@ -1,7 +1,5 @@
 package com.example.lab06
 
-import ParliamentMember
-import ParliamentMembersData
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
