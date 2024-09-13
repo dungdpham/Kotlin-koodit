@@ -26,3 +26,7 @@ fun main() {
 
 }
 
+fun asd() {
+    
+}
+
