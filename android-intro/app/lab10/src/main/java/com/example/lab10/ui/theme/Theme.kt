@@ -1,6 +1,5 @@
-package com.example.inclass130924.ui.theme
+package com.example.lab10.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

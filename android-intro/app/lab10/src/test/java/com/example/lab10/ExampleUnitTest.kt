@@ -1,4 +1,4 @@
-package com.example.inclass130924
+package com.example.lab10
 
 import org.junit.Test
 

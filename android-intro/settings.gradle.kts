@@ -22,6 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "Android Intro"
 include(":app")
 include(":app:lab06")
-include(":app:inclass130924")
+include(":app:lab10")
 include(":app:lab07")
 include(":app:lab08")

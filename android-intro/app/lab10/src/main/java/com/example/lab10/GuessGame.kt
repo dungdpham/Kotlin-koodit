@@ -1,6 +1,4 @@
-package com.example.inclass130924
-
-import kotlin.random.Random
+package com.example.lab10
 
 class GuessGame(val range: IntRange) {
     private val secret = range.random()
