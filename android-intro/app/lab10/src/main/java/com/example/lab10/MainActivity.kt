@@ -96,7 +96,7 @@ fun GameView(game: NumberGame, modifier: Modifier = Modifier) {
             } ?: run { isError = true }
         }) { Text("Make guess!") }
 
-        if (result.isNotEmpty()) Text("$result [${game.range.first}..${game.range.last}]")
+        if (result.isNotEmpty()) Text("$result ${game.guesses.sorted()}")
     }
 }
 
