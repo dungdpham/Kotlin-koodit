@@ -17,7 +17,7 @@ import java.util.UUID
 
 class MyViewModel : ViewModel() {
     companion object GattAttributes {
-        const val SCAN_PERIOD: Long = 3000
+        const val SCAN_PERIOD: Long = 5000
 
         const val STATE_DISCONNECTED = 0
         const val STATE_CONNECTING = 1

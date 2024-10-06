@@ -73,7 +73,7 @@
       </SelectionState>
       <SelectionState runConfigName="app.lab11">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-09-27T10:39:59.127835800Z">
+        <DropdownSelection timestamp="2024-10-06T18:28:03.936798400Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\antia\.android\avd\Pixel_6_API_30.avd" />
@@ -85,6 +85,17 @@
       <SelectionState runConfigName="app.lab270924">
         <option name="selectionMode" value="DROPDOWN" />
         <DropdownSelection timestamp="2024-09-27T11:05:54.630113900Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\antia\.android\avd\Pixel_6_API_30.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="app.lab13">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-10-06T15:35:27.243620300Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\antia\.android\avd\Pixel_6_API_30.avd" />

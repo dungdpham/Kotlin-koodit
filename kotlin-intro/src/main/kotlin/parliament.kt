@@ -16,7 +16,7 @@ class ParliamentMember(val hetekaId: Int,
     fun firstname(firstname: String): ParliamentMember {
         this.firstname = firstname
         return this
-    }
+    }   
     fun party(party: String): ParliamentMember {
         this.party = party
         return this
