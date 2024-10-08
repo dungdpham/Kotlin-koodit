@@ -16,6 +16,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
@@ -28,3 +29,4 @@ include(":app:lab08")
 include(":app:lab11")
 include(":app:lab270924")
 include(":app:lab13")
+include(":app:lab14")
